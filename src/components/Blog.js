@@ -18,7 +18,7 @@ const Blog = () => {
 
   const fetchBlogs = async () => {
     const response = await fetch(
-      "https://decorous-candy-rooster.glitch.me/getBlogs"
+      "https://private-ultra-yumberry.glitch.me/getBlogs"
     );
     const data = await response.json();
     setBlogs(data);
@@ -44,7 +44,7 @@ const Blog = () => {
             <RightContainer>
               <div className="right">
                 <img
-                  src={`https://decorous-candy-rooster.glitch.me/images/${blog.Image}`}
+                  src={`https://private-ultra-yumberry.glitch.me/images/${blog.Image}`}
                   alt={blog.Id}
                 />
               </div>

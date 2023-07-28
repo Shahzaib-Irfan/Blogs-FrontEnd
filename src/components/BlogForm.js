@@ -55,7 +55,7 @@ const BlogForm = ({ onSave }) => {
 
     try {
       const response = await fetch(
-        `https://decorous-candy-rooster.glitch.me/Add?content=${content}`,
+        `https://private-ultra-yumberry.glitch.me/Add?content=${content}`,
         {
           method: "POST",
           headers: {
@@ -79,7 +79,7 @@ const BlogForm = ({ onSave }) => {
     <div>
       <center>
         <form
-          action={`https://decorous-candy-rooster.glitch.me/Add?content=${content}`}
+          action={`https://private-ultra-yumberry.glitch.me/Add?content=${content}`}
           method="post"
           encType="multipart/form-data"
         >
