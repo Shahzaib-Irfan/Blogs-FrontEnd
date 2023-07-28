@@ -9,6 +9,10 @@ const BlogList = () => {
     fetchBlogs();
   }, []);
 
+  useEffect(() => {
+    console.log(blogs);
+  }, [blogs]);
+
   const fetchBlogs = async () => {
     console.log("Fetching");
     const response = await fetch(
