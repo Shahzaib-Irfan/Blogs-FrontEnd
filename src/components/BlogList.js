@@ -6,22 +6,20 @@ const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
+    async function fetchBlogs() {
+      const response = await fetch(
+        "https://private-ultra-yumberry.glitch.me/getBlogs"
+      );
+      const data = await response.json();
+      console.log(response);
+      setBlogs(data);
+    }
     fetchBlogs();
   }, []);
 
-  useEffect(() => {
-    console.log(blogs);
-  }, [blogs]);
-
-  const fetchBlogs = async () => {
-    console.log("Fetching");
-    const response = await fetch(
-      "https://private-ultra-yumberry.glitch.me/getBlogs"
-    );
-    const data = await response.json();
-    console.log(data);
-    setBlogs(data);
-  };
+  // useEffect(() => {
+  //   console.log(blogs);
+  // }, [blogs]);
 
   if (blogs.length === 0) {
     return (
