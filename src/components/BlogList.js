@@ -14,6 +14,7 @@ const BlogList = () => {
       "https://private-ultra-yumberry.glitch.me/getBlogs"
     );
     const data = await response.json();
+    console.log(data);
     setBlogs(data);
   };
 
