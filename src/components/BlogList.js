@@ -10,6 +10,7 @@ const BlogList = () => {
   }, []);
 
   const fetchBlogs = async () => {
+    console.log("Fetching");
     const response = await fetch(
       "https://private-ultra-yumberry.glitch.me/getBlogs"
     );
