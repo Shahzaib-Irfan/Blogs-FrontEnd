@@ -11,7 +11,7 @@ const BlogList = () => {
 
   const fetchBlogs = async () => {
     const response = await fetch(
-      "https://bristle-resilient-galette.glitch.me/getBlogs"
+      "https://decorous-candy-rooster.glitch.me/getBlogs"
     );
     const data = await response.json();
     setBlogs(data);
@@ -35,7 +35,7 @@ const BlogList = () => {
               return (
                 <BlogBox key={blog.Id}>
                   <BlogImage
-                    src={`https://bristle-resilient-galette.glitch.me/images/${blog.Image}`}
+                    src={`https://decorous-candy-rooster.glitch.me/images/${blog.Image}`}
                     alt={blog.Id}
                   />
                   <Link
