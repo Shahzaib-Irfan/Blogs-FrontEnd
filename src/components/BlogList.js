@@ -31,22 +31,17 @@ const BlogList = () => {
             <h2>Blogs</h2>
           </Centered>
           <BlogContainer>
-            {blogs.map((blog) => {
-              return (
-                <BlogBox key={blog.Id}>
-                  <BlogImage
-                    src={`https://private-ultra-yumberry.glitch.me/images/${blog.Image}`}
-                    alt={blog.Id}
-                  />
-                  <Link
-                    style={{ textTransform: "none" }}
-                    to={`/blog/${blog.Id}`}
-                  >
-                    <BlogTitle>{"Blog #" + blog.Id}</BlogTitle>
-                  </Link>
-                </BlogBox>
-              );
-            })}
+            {blogs.map((blog) => (
+              <BlogBox key={blog.Id}>
+                <BlogImage
+                  src={`https://private-ultra-yumberry.glitch.me/images/${blog.Image}`}
+                  alt={blog.Id}
+                />
+                <Link style={{ textTransform: "none" }} to={`/blog/${blog.Id}`}>
+                  <BlogTitle>{"Blog #" + blog.Id}</BlogTitle>
+                </Link>
+              </BlogBox>
+            ))}
           </BlogContainer>
         </div>
       </SectionContainer>
